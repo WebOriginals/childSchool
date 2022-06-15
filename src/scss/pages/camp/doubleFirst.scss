@@ -1,0 +1,21 @@
+.doubleFirst{
+  @include adaptiveValue(padding-top, 80, 45);
+  @include adaptiveValue(padding-bottom, 80, 45);
+
+  &__title{
+    margin-bottom: rem(30);
+  }
+  &-img{
+    display: grid;
+    grid-gap: rem(10);
+   
+  }
+  &__content{
+    @include mq('tablet-wide') {
+      width: rem(570);
+    }
+    p{
+      @include adaptiveValue(font-size,18, 14);
+    }
+  }
+}

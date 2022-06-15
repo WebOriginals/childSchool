@@ -1,0 +1,77 @@
+.rates{
+  padding: 30px 0;
+  @include mq('tablet-wide') {
+    padding: 60px 0;
+  }
+}
+.rates__body{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  @include mq('tablet-wide') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.rates-column{
+  text-align: center;
+  padding: 20px 25px;
+  color: $color_1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  @include mq('tablet-wide') {
+    padding: 30px 55px;
+  }
+
+  &:nth-child(1){
+    background: $color_3;
+  }
+  &:nth-child(2){
+    background: $color_4;
+  }
+  &:nth-child(3){
+    background: $color_6;
+  }
+  &__title{
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  &__descreption{
+    @include adaptiveValue(font-size,18,16);
+    margin-bottom: 20px;
+  }
+  &__btn{
+    background: $color_1;
+    color: $color_2;
+    text-align: center;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    cursor: pointer;
+    transition: .5s;
+    width: fit-content;
+    @include adaptiveValue(font-size,16,14);
+    border: 1px solid $color_1;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-weight: 800;
+    @include maq('tablet-wide') {
+      width: 100%;
+    }
+    &:hover{
+      border: 1px solid $color_1;
+      background: $color_3;
+      color: $color_2;
+    }
+  }
+}
+
+
+
+
+

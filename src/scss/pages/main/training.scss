@@ -1,0 +1,41 @@
+.training{
+  padding: 30px 0;
+  @include mq('tablet-wide') {
+    padding: 60px 0;
+  }
+}
+
+.training-description{
+  @include mq('tablet-wide') {
+    width: 80%;
+  }
+}
+
+.training-body{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  margin-top: 35px;
+  @include mq('tablet-wide') {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.training-column{
+  display: grid;
+  grid-gap:10px 30px;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  @include mq('tablet-wide') {
+    grid-template-columns: 90px 1fr;
+  }
+  &__ic{
+
+  }
+  &__title{
+    @include adaptiveValue(font-size,24,20);
+  }
+  &__text{
+    grid-column: span 2;
+  }
+}

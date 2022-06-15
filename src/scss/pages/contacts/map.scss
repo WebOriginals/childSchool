@@ -1,0 +1,28 @@
+.map{
+  @include adaptiveValue(padding-top, 30, 15);
+  @include adaptiveValue(padding-bottom, 60, 30);
+  &__container{
+    display: grid;
+    grid-gap: rem(30);
+
+    @include mq('tablet-wide') {
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+    }
+  }
+  &__text{
+    display: grid;
+    grid-gap: rem(5);
+  }
+  &__soc{
+    margin-top: rem(30);
+  }
+  &__mail{
+    text-decoration: underline  !important;
+  }
+}
+#map{
+  display: block;
+  width: 100%;
+  @include adaptiveValue(height, 430, 206)
+}

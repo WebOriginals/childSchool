@@ -1,0 +1,47 @@
+.schedule{
+  @include adaptiveValue(padding-top, 80, 45);
+  @include adaptiveValue(padding-bottom, 80, 45);
+
+  &__conainer{
+
+  }
+  &__title{
+    margin-bottom: rem(30);
+  }
+  &__grid{
+    display: grid;
+    grid-gap: rem(15);
+    grid-template-columns: 1fr 1.5fr;
+    @include mq('tablet-wide') {
+      grid-template-columns: 1fr;
+    }
+
+  }
+  &__row-top{
+    display: grid;
+    grid-gap: rem(15);
+    padding: rem(20);
+    background-color: $color_1;
+    border-radius: rem(15);
+    align-items: center;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    span{
+      text-align: center;
+    }
+
+    @include mq('tablet-wide') {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  &__row-bottom{
+    display: grid;
+    grid-gap: rem(15);
+    padding: rem(20);
+    @include mq('tablet-wide') {
+      grid-template-columns: repeat(6, 1fr);
+      span{
+        text-align: center;
+      }
+    }
+  }
+}

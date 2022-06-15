@@ -1,0 +1,43 @@
+.contact-form{
+  @include adaptiveValue(padding-top, 60, 30);
+  @include adaptiveValue(padding-bottom, 80, 45);
+
+  &__container{
+    display: grid;
+    grid-gap: rem(10);
+
+    @include mq('tablet-wide') {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: rem(30);
+      align-items: center;
+    }
+  }
+  &__form{
+    @include adaptiveValue(padding,30 , 20);
+    border-radius: rem(15);
+    background-color: $color_1;
+  }
+  &__title{
+    color: $mainColor;
+  }
+  &__text{
+    margin-bottom: rem(30);
+  }
+  .input{
+    border: 1px solid $mainColor;
+    padding: rem(15) rem(20);
+    border-radius: rem(5) ;
+  }
+  &__polotic{
+    margin-bottom: rem(30);
+    color: $color_7;
+    a{
+      text-decoration: underline !important;
+    }
+  }
+  button{
+    @include maq('tablet-wide') {
+      width: 100%;
+    }
+  }
+}

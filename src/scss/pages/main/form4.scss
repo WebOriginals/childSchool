@@ -1,0 +1,46 @@
+.form4{
+
+  &__container{
+    @include mq('tablet-wide') {
+      display: grid;
+      grid-gap: rem(30);
+      grid-template-columns: 40% 50%;
+      align-items: center;
+    }
+  }
+  &-form{
+    background: #458AFB;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    @include adaptiveValue(padding, 30, 15);
+    color: $color_1;
+  }
+  &__title{
+    color: $color_1;
+    @include mq('tablet-wide') {
+      max-width: 60%;
+    }
+  }
+  &__grid{
+    display: grid;
+    grid-gap: rem(30);
+    grid-template-columns: 1.5fr 1fr;
+    margin-top: rem(30);
+    margin-bottom: rem(20);
+
+    button{
+      width: 100%;
+    }
+  }
+  &__img{
+    @include maq('tablet-wide') {
+      max-width: 100%;
+    }
+    @include mq('tablet-wide') {
+      transform: translateX(-250px);
+      img{
+        width: 643px;
+      }
+    }
+  }
+}

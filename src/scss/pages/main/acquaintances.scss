@@ -1,0 +1,121 @@
+.acquaintances {
+  padding: 30px 0;
+  @include mq('tablet-wide') {
+    padding: 60px 0;
+  }
+}
+
+.acquaintances__description {
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.acquaintances__list {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  margin: 20px 0 60px;
+  @include mq('tablet-wide') {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 30px 0 85px;
+  }
+
+  li {
+    position: relative;
+    height: 47px;
+    display: flex;
+    align-items: flex-end;
+    line-height: 1;
+    margin-bottom: 27px;
+    @include mq('tablet-wide') {
+      height: 80px;
+      margin-bottom: 50px;
+    }
+
+    &:nth-child(odd) {
+      padding-left: 30px;
+    }
+
+    &:nth-child(even) {
+      @include maq('tablet-wide') {
+        margin-left: auto;
+      }
+    }
+
+
+    span {
+      transform: rotate(-90deg) translateX(10px) translateY(10px);
+
+      @include mq('tablet-wide') {
+        transform: rotate(-90deg) translateX(10px) translateY(10px);
+      }
+
+    }
+
+    b {
+      font-size: 42px;
+      font-weight: 500;
+      transform: translateY(10px);
+      position: relative;
+      z-index: 1;
+      @include mq('tablet-wide') {
+        font-size: 72px;
+        transform: translateY(15px);
+      }
+
+    }
+    p {
+      @include adaptiveValue(font-size, 18, 14);
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 75px;
+      height: 75px;
+      background: $color_4;
+      border-radius: 50%;
+      z-index: 0;
+      @include mq('tablet-wide') {
+        width: 130px;
+        height: 130px;
+      }
+    }
+
+
+  }
+}
+
+.acquaintances__video {
+  border-radius: 10px;
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 100%;
+  padding-top: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include mq('tablet-wide') {
+    width: 770px;
+    padding-top: 38%;
+  }
+
+  .acquaintances-video__pic {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    width: 60px;
+    @include mq('tablet-wide') {
+      width: 130px;
+      top: calc(50% - 66px);
+      left: calc(50% - 66px);
+    }
+  }
+}
+

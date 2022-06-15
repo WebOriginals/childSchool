@@ -1,0 +1,64 @@
+.sec-form1{
+  padding: 30px 0;
+  @include mq('tablet-wide') {
+    padding: 60px 0;
+  }
+}
+
+.form1-body{
+  display: grid;
+
+  grid-template-columns: 1fr;
+  @include mq('tablet-wide') {
+    grid-gap: 30px;
+    grid-template-columns: 1fr 470px;
+  }
+}
+
+.form1__title{
+  z-index: 10;
+  position: relative;
+}
+.form1__img{
+  @include mq('tablet-wide') {
+    margin-top: -100px;
+  }
+
+  img{
+    max-width: 100%;
+    @include mq('tablet-wide') {
+      max-width: 77%;
+      display: block;
+      margin-left: auto;
+    }
+  }
+}
+
+.form1{
+  padding: 30px 15px;
+  background: $color_3;
+  border-radius: 15px;
+
+  @include mq('tablet-wide') {
+    padding: 30px;
+  }
+
+
+  &__politic{
+    text-align: center;
+    color: $color_1;
+    a{
+      color: $color_1;
+    }
+    margin-bottom: 20px;
+  }
+  .form__btn{
+    margin: auto;
+  }
+
+  &__inputs{
+    display: grid;
+    grid-gap: 30px;
+    margin-bottom: 30px;
+  }
+}

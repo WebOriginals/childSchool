@@ -1,0 +1,46 @@
+.pagging {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(20);
+	@include adaptiveValue(margin-top, 60, 30);
+
+	// .pagging__arrow
+	&__arrow {
+		@media (any-hover: hover) {
+			&:hover {
+				color: $color_3;
+			}
+		}
+	}
+	// .pagging__list
+	&__list {
+		display: flex;
+		gap: rem(10);
+		li {
+		}
+	}
+	// .pagging__item
+	&__item {
+		width: 46px;
+		height: 46px;
+		border: 1px solid #E7E7E7;
+		border-radius: 10px;
+		color: #E7E7E7;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $color_1;
+
+		&._active {
+			background-color: $color_3;
+			color: $color_1;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $color_3;
+				color: $color_1;
+			}
+		}
+	}
+}

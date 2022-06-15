@@ -1,0 +1,37 @@
+.video{
+  @include adaptiveValue(padding-top, 80, 45);
+  @include adaptiveValue(padding-bottom, 80, 45);
+
+  &__container{
+    display: grid;
+    grid-gap: rem(30);
+
+    @include mq('tablet-wide') {
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+    }
+  }
+  &__title{
+
+  }
+  &__text{
+
+  }
+  &__video{
+    border-radius: rem(15);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: rem(220);
+    background-size: cover;
+    background-position: center ;
+    @include mq('tablet-wide') {
+      height: rem(490);
+    }
+  }
+  &-body__ic{
+    @include maq('tablet-wide') {
+     transform: scale(0.5,0.5);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+include pug/mixins
+doctype html
+html(lang="ru")
+    +head('Главная')
+    body
+        .wrapper
+            include pug/_basic/_header
+            main.page.padding-top-page
+                +crumbs('Блог')
+                +title('Блог')
+                include pug/blog/blog
+                include pug/camp/form
+
+
+            include pug/_basic/_footer
+
+        //include pug/_basic/_popup
+        include pug/_basic/_js

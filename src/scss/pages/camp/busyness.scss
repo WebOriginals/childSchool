@@ -1,0 +1,32 @@
+.busyness{
+  @include adaptiveValue(padding-top, 80, 45);
+  @include adaptiveValue(padding-bottom, 80, 45);
+
+  &__container{
+
+  }
+  &__title{
+    margin-bottom: rem(30);
+  }
+  &-grid{
+    display: grid;
+    grid-gap: rem(30);
+
+    @include mq('tablet-wide') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item{
+      display: grid;
+      grid-gap: rem(5);
+      justify-items: center;
+
+      h6{
+        margin-top: 5px;
+      }
+      p{
+        text-align: center;
+      }
+    }
+  }
+}

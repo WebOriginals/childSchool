@@ -1,0 +1,137 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: $color_3;
+}
+
+.header__container{
+  padding: 0 15px;
+  max-width: 100%;
+}
+
+.body-header{
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 100px auto 50px;
+  align-items: center;
+  height: 60px;
+  @include mq('tablet') {
+    grid-template-columns: 70px 1fr auto ;
+    grid-gap: 15px;
+  }
+  @include mq('tablet-wide') {
+    grid-template-columns: 160px 1fr auto auto auto;
+  }
+  @include mq('desktop') {
+
+    height: 100px;
+    grid-gap: rem(30);
+  }
+}
+
+.header__logo{
+  display: block;
+  width: 100%;
+  z-index: 300;
+  img{
+    max-width: 100%;
+  }
+}
+
+.header-phone{
+  z-index: 10;
+  font-size: rem(20);
+  display: flex;
+  align-items: center;
+  @include maq('tablet-wide') {
+    gap: rem(10);
+  }
+  gap: rem(15);
+}
+
+.header-phone__link{
+  color: $color_1;
+  font-weight: 700;
+  font-size: rem(20);
+}
+
+.menu__bottom{
+  @include maq('tablet-wide') {
+   margin-top: auto;
+    padding-top: rem(30);
+    display: flex;
+    gap: rem(12);
+    flex-wrap: wrap;
+    border-top: 1px solid $color_1;
+    justify-content: space-between;
+
+    .header-phone__link{
+      font-size: rem(16);
+    }
+    .header__collback{
+      font-size: rem(12);
+    }
+
+  }
+}
+
+.header__city{
+  color: $color_1;
+  border-bottom: 1px solid $color_1;
+  cursor: pointer;
+}
+
+.header__whatsapp{
+  display: flex;
+  align-items: center;
+}
+
+.menu__list{
+  @include mq('tablet-wide') {
+    margin-left: 15%;
+  }
+}
+
+body._pc{
+  .header-phone__link{
+    &:hover{
+      color: $color_3;
+    }
+  }
+  .header-mail__link{
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+.stickytop {
+  background: $color_3;
+  .body-header{
+    height: 70px;
+    .header__logo{
+      width: 100px;
+    }
+  }
+}
+
+.menu-mobile{
+  display: grid;
+  grid-gap: 15px 5px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+
+  @include mq('tablet-990') {
+    display: none;
+  }
+}
+
+
+.main {
+  .header{
+    background: transparent;
+  }
+}

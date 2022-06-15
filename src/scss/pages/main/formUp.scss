@@ -1,0 +1,39 @@
+.formUp{
+  padding: 30px 0 0;
+  @include mq('tablet-wide') {
+    padding: 60px 0 0;
+  }
+}
+
+
+.formUp-body{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  @include mq('tablet-wide') {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.formUp__img{
+position: relative;
+  img{
+    @include maq('tablet-wide') {
+      max-width: 100%;
+    }
+
+  }
+}
+
+.formUp__post{
+  position: absolute;
+  font-style: italic;
+  font-size: 16px;
+  bottom: 100px;
+  left: -200px;
+  @include maq('tablet-wide') {
+    bottom: 320px;
+    left: -10px;
+    font-size: 12px;
+  }
+}

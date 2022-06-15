@@ -1,0 +1,36 @@
+.sec-form2{
+  padding: 30px 0;
+  @include mq('tablet-wide') {
+    padding: 60px 0;
+  }
+}
+
+.form2-body{
+  background: $color_3;
+  padding: 20px 15px;
+  border-radius: 15px;
+  @include mq('tablet-wide') {
+    padding: 30px 55px;
+  }
+}
+
+.form2__title{
+  color: $color_1;
+  @include adaptiveValue(margin-bottom,30,20);
+}
+
+.form2__inputs{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  @include mq('tablet-wide') {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.form2__politic{
+  color: $color_1;
+  margin: 30px 0;
+  a{
+    color: $color_1;
+  }
+}

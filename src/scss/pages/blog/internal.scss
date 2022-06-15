@@ -1,0 +1,28 @@
+.internal{
+  @include adaptiveValue(padding-top, 30, 15);
+  @include adaptiveValue(padding-bottom, 80, 45);
+
+  &__main-ibg{
+    @include adaptiveValue(height, 632, 173);
+    @include adaptiveValue(margin-bottom, 60, 30);
+  }
+
+  &__grid{
+    display: grid;
+    grid-gap: rem(30);
+    @include adaptiveValue(margin-top, 60, 30);
+    @include adaptiveValue(margin-bottom, 60, 30);
+    @include mq('tablet-wide') {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__img-ibg{
+    @include adaptiveValue(height, 300, 173);
+  }
+
+  &__date{
+    color: $color_7;
+    @include adaptiveValue(margin-top, 30, 15);
+  }
+}

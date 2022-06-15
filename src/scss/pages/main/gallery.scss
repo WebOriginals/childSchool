@@ -1,0 +1,29 @@
+.gallery{
+  margin: 30px 0;
+
+  @include mq('tablet-wide') {
+    margin: 60px 0;
+  }
+}
+.gallery-body{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 240px);
+
+  @include mq('tablet-wide') {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 340px);
+  }
+  .gallery__column{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:nth-child(1),
+    &:nth-child(3){
+      @include mq('tablet-wide') {
+        grid-row: span 2;
+      }
+    }
+  }
+}

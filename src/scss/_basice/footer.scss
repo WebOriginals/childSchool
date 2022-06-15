@@ -1,0 +1,76 @@
+.footer{
+  padding: 20px;
+  background: #0D2839;
+  color: $color_1;
+  @include adaptiveValue(font-size, 16, 14);
+
+  a{
+    color: $color_1;
+    text-decoration: none;
+    @include adaptiveValue(font-size, 20, 16);
+
+  }
+  p{
+    margin-bottom: 0;
+  }
+
+}
+.body-footer-top{
+  display: grid;
+
+  @include mq('tablet') {
+    grid-template-columns: 130px 1fr;
+    grid-gap: rem(30);
+  }
+  @include maq('tablet') {
+    grid-gap: rem(5);
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: rem(30);
+  }
+
+  .footer-nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(5);
+    a{
+      display: block;
+      padding: 5px;
+    }
+  }
+}
+.body-footer-bottom{
+  display: grid;
+  grid-gap: rem(5);
+  @include maq('tablet') {
+    justify-content: center;
+    justify-items: center;
+  }
+  @include mq('tablet') {
+    grid-gap: rem(30);
+    grid-template-columns: 130px auto auto auto auto;
+  }
+}
+.footer-logo,
+.footer-address,
+.footer-phone,
+.footer-email,
+.footer-soc,
+.footer-copor{
+  align-self: center;
+  @include maq('tablet') {
+    margin-bottom: 15px;
+  }
+}
+
+.footer-logo {
+  width: 100px;
+
+  img {
+    width: 100%;
+  }
+}
+.footer-soc{
+  display: flex;
+  gap: rem(15);
+}
