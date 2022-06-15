@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Главная</title>
+    <meta charset="UTF-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!-- <meta name="robots" content="noindex, nofollow">-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="body-header"><a class="header__logo" href="/"><img src="img/icons/logo.svg" alt="logo"></a>
+            <div class="header__menu menu" data-da=".body-header,991,last">
+              <div class="menu__icon"><span></span></div>
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li><a class="menu__link" data-goto=".page__section_1" href="#">О компании</a></li>
+                  <li><a class="menu__link" data-goto=".page__section_2" href="#">Услуги</a></li>
+                  <li><a class="menu__link" data-goto=".page__section_2" href="#">Кейсы</a></li>
+                  <li><a class="menu__link" data-goto=".page__section_3" href="#">Карьера</a></li>
+                  <li><a class="menu__link" data-goto=".page__section_3" href="#">Контакты</a></li>
+                </ul>
+                <div class="menu__bottom"></div>
+              </nav>
+            </div>
+            <div class="header__city popup-link" data-popup="#popup_1">Краснодар</div>
+            <div class="header__phone header-phone" data-da=".menu__bottom,991,last"><a class="header-phone__link" href="tel:+79002477500">+7 (900) 247-75-00</a><a class="header__whatsapp" href="https://wa.me/79282100515">
+                <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2543 3.92364C19.8377 1.50427 16.624 0.171325 13.2 0.169922C6.14506 0.169922 0.403065 5.91145 0.400311 12.9686C0.399324 15.2245 0.988721 17.4265 2.10886 19.3675L0.292969 26.0001L7.07826 24.2203C8.94776 25.24 11.0527 25.7775 13.1949 25.7782H13.2001C13.2005 25.7782 13.1998 25.7782 13.2002 25.7782C20.2544 25.7782 25.9968 20.0361 25.9997 12.9788C26.001 9.55871 24.6709 6.3429 22.2543 3.92364ZM13.2001 23.6165H13.1957C11.2869 23.6158 9.41449 23.1029 7.78107 22.1336L7.39265 21.9031L3.36616 22.9593L4.44093 19.0335L4.18796 18.631C3.12305 16.9372 2.56062 14.9795 2.56145 12.9693C2.56374 7.1037 7.33627 2.33168 13.2044 2.33168C16.0459 2.33257 18.717 3.44065 20.7256 5.45153C22.7342 7.46241 23.8397 10.1353 23.8386 12.9779C23.8362 18.844 19.0638 23.6165 13.2001 23.6165Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0355 15.6487C18.7157 15.4886 17.1433 14.715 16.8502 14.6082C16.5571 14.5015 16.3438 14.4481 16.1306 14.7683C15.9175 15.0884 15.3045 15.8088 15.118 16.0223C14.9314 16.2356 14.7448 16.2625 14.4251 16.1022C14.1053 15.9422 13.0748 15.6045 11.8532 14.5149C10.9024 13.6668 10.2606 12.6196 10.0739 12.2993C9.88742 11.9792 10.0541 11.8061 10.2142 11.6466C10.3581 11.5033 10.5341 11.2731 10.694 11.0863C10.8539 10.8997 10.9072 10.7661 11.0138 10.5528C11.1204 10.3394 11.0671 10.1526 10.9871 9.99255C10.9072 9.83247 10.2676 8.25828 10.0011 7.61781C9.74142 6.99428 9.47779 7.07876 9.28145 7.06884C9.09518 7.05954 8.88169 7.05762 8.66851 7.05762C8.45533 7.05762 8.10878 7.13768 7.8157 7.45779C7.52256 7.778 6.69629 8.55179 6.69629 10.1258C6.69629 11.7001 7.8423 13.2208 8.00222 13.4342C8.16209 13.6478 10.2574 16.878 13.4656 18.2633C14.2287 18.5929 14.8244 18.7896 15.2888 18.937C16.055 19.1805 16.7522 19.1461 17.3033 19.0637C17.9177 18.9719 19.1955 18.2901 19.4619 17.5431C19.7285 16.796 19.7285 16.1555 19.6485 16.0222C19.5686 15.8889 19.3553 15.8088 19.0355 15.6487Z" fill="white"></path>
+                </svg></a></div>
+            <button class="button-border-w header__collback popup-link" data-popup="#popup_3" data-da=".menu__bottom,991,last">ОБРАТНЫЙ ЗВОНОК</button>
+          </div>
+        </div>
+      </header>
+      <main class="page padding-top-page">
+        <section class="crumbs-page">
+          <div class="crumbs-page__container">
+            <ul class="crumbs-page__list">
+              <li><a href="/">Главная /</a></li>
+              <li>Блог</li>
+            </ul>
+          </div>
+        </section>
+        <section class="title-page">
+          <div class="sec-title-page__container">
+            <h1 class="title-page">Блог</h1>
+          </div>
+        </section>
+        <section class="blog">
+          <div class="blog__container">
+            <div class="blog__filter">
+              <button class="active">Все</button>
+              <button>Мероприятия</button>
+              <button>Новости</button>
+              <button>Полезные статьи</button>
+            </div>
+            <div class="blog__grid"><a class="blog__item blog--item" href="#">
+                <div class="blog--item__img-ibg"><img src="img/png/6.png" alt=""></div>
+                <h3 class="blog--item__title">День открытых дверей в школе архетиктуры и дизайна</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac proin sit in enim dignissim mauris.At non dictumst erat sapien pellentesque sed.</p>
+                <div class="blog--item__date">17 мая 2022</div></a><a class="blog__item blog--item" href="#">
+                <div class="blog--item__img-ibg"><img src="img/png/6.png" alt=""></div>
+                <h3 class="blog--item__title">День открытых дверей в школе архетиктуры и дизайна</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac proin sit in enim dignissim mauris. At non dictumst erat sapien pellentesque sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac proin sit in enim dignissim mauris. At non dictumst erat sapien pellentesque sed.</p>
+                <div class="blog--item__date">17 мая 2022</div></a><a class="blog__item blog--item" href="#">
+                <div class="blog--item__img-ibg"><img src="img/png/6.png" alt=""></div>
+                <h3 class="blog--item__title">День открытых дверей в школе архетиктуры и дизайна</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac proin sit in enim dignissim mauris.At non dictumst erat sapien pellentesque sed.</p>
+                <div class="blog--item__date">17 мая 2022</div></a><a class="blog__item blog--item" href="#">
+                <div class="blog--item__img-ibg"><img src="img/png/6.png" alt=""></div>
+                <h3 class="blog--item__title">День открытых дверей в школе архетиктуры и дизайна</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac proin sit in enim dignissim mauris.At non dictumst erat sapien pellentesque sed.</p>
+                <div class="blog--item__date">17 мая 2022</div></a><a class="blog__item blog--item" href="#">
+                <div class="blog--item__img-ibg"><img src="img/png/6.png" alt=""></div>
+                <h3 class="blog--item__title">День открытых дверей в школе архетиктуры и дизайна</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac proin sit in enim dignissim mauris.At non dictumst erat sapien pellentesque sed.</p>
+                <div class="blog--item__date">17 мая 2022</div></a><a class="blog__item blog--item" href="#">
+                <div class="blog--item__img-ibg"><img src="img/png/6.png" alt=""></div>
+                <h3 class="blog--item__title">День открытых дверей в школе архетиктуры и дизайна</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac proin sit in enim dignissim mauris.At non dictumst erat sapien pellentesque sed.</p>
+                <div class="blog--item__date">17 мая 2022</div></a></div>
+            <div class="pagging"><a class="pagging__arrow" href="">«</a><a class="pagging__arrow" href="">‹</a>
+              <ul class="pagging__list">
+                <li><a class="pagging__item _active" href="">01</a></li>
+                <li><a class="pagging__item" href="">02</a></li>
+                <li><a class="pagging__item" href="">03</a></li>
+              </ul><a class="pagging__arrow" href="">›</a><a class="pagging__arrow" href="">»</a>
+            </div>
+          </div>
+        </section>
+        <section class="form">
+          <div class="form__container pad-form1">
+            <div class="form-body">
+              <div class="form-body__content">
+                <h2 class="form__title">Оформите раннее бронирование и получите скидку 20%!</h2>
+                <p>Заполните поля формы, чтобы мы могли связаться с вами.</p>
+                <form>
+                  <div class="form__inputs">
+                    <input class="form__input" placeholder="Ваше имя">
+                    <input class="form__input" placeholder="Ваш телефон">
+                  </div>
+                  <div class="form__politic">Нажав на кнопку, я даю согласие на обработку <a href="#">персональных данных</a></div>
+                  <div class="form__btn button">ОТПРАВИТЬ</div>
+                </form>
+              </div>
+              <div class="form__img"><img src="img/png/4.png"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section class="footer">
+        <div class="__container">
+          <div class="body-footer-top">
+            <div class="footer-logo"><img src="img/icons/logo.svg"></div>
+            <nav class="footer-nav"><a href="#">О школе</a><a href="#">Блог</a><a href="#">Детский лагерь</a><a href="#">Контакты</a></nav>
+          </div>
+          <div class="body-footer-bottom">
+            <div class="footer-copor" data-da=".body-footer-bottom,991,last">
+              <p>Brick to brick © 2022</p>
+            </div>
+            <div class="footer-address">
+              <p>г. Краснодар, Дальний проезд 9, кор. 1</p>
+            </div>
+            <div class="footer-phone"><a href="+7 (918) 888-88-42">+7 (918) 888-88-42</a></div>
+            <div class="footer-email"><a href="rtrte@rtet.ru">designschool@bricktobrick.ru</a></div>
+            <div class="footer-soc"><a href="#">
+                <svg width="41" height="41" viewbox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.1895" cy="20.4126" r="19" stroke="#fff" stroke-width="2"></circle>
+                  <path d="M16.4095 11.4126H23.9695C26.8495 11.4126 29.1895 13.7526 29.1895 16.6326V24.1926C29.1895 25.577 28.6395 26.9048 27.6606 27.8837C26.6816 28.8626 25.3539 29.4126 23.9695 29.4126H16.4095C13.5295 29.4126 11.1895 27.0726 11.1895 24.1926V16.6326C11.1895 15.2482 11.7394 13.9204 12.7184 12.9415C13.6973 11.9626 15.025 11.4126 16.4095 11.4126ZM16.2295 13.2126C15.3702 13.2126 14.546 13.554 13.9384 14.1616C13.3308 14.7692 12.9895 15.5933 12.9895 16.4526V24.3726C12.9895 26.1636 14.4385 27.6126 16.2295 27.6126H24.1495C25.0088 27.6126 25.8329 27.2712 26.4405 26.6636C27.0481 26.056 27.3895 25.2319 27.3895 24.3726V16.4526C27.3895 14.6616 25.9405 13.2126 24.1495 13.2126H16.2295ZM24.9145 14.5626C25.2128 14.5626 25.499 14.6811 25.7099 14.8921C25.9209 15.1031 26.0395 15.3892 26.0395 15.6876C26.0395 15.986 25.9209 16.2721 25.7099 16.4831C25.499 16.6941 25.2128 16.8126 24.9145 16.8126C24.6161 16.8126 24.3299 16.6941 24.119 16.4831C23.908 16.2721 23.7895 15.986 23.7895 15.6876C23.7895 15.3892 23.908 15.1031 24.119 14.8921C24.3299 14.6811 24.6161 14.5626 24.9145 14.5626ZM20.1895 15.9126C21.3829 15.9126 22.5275 16.3867 23.3714 17.2306C24.2153 18.0745 24.6895 19.2191 24.6895 20.4126C24.6895 21.6061 24.2153 22.7507 23.3714 23.5946C22.5275 24.4385 21.3829 24.9126 20.1895 24.9126C18.996 24.9126 17.8514 24.4385 17.0075 23.5946C16.1636 22.7507 15.6895 21.6061 15.6895 20.4126C15.6895 19.2191 16.1636 18.0745 17.0075 17.2306C17.8514 16.3867 18.996 15.9126 20.1895 15.9126ZM20.1895 17.7126C19.4734 17.7126 18.7866 17.9971 18.2803 18.5034C17.7739 19.0098 17.4895 19.6965 17.4895 20.4126C17.4895 21.1287 17.7739 21.8154 18.2803 22.3218C18.7866 22.8281 19.4734 23.1126 20.1895 23.1126C20.9055 23.1126 21.5923 22.8281 22.0986 22.3218C22.605 21.8154 22.8895 21.1287 22.8895 20.4126C22.8895 19.6965 22.605 19.0098 22.0986 18.5034C21.5923 17.9971 20.9055 17.7126 20.1895 17.7126Z" fill="#fff"></path>
+                </svg></a><a href="#">
+                <svg width="41" height="41" viewbox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20.1895" cy="20.4126" r="19" stroke="#fff" stroke-width="2"></circle>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M28.7657 16.1626C28.8992 15.7396 28.7657 15.4321 28.1751 15.4321H26.2112C25.7158 15.4321 25.4871 15.7013 25.3536 15.9893C25.3536 15.9893 24.3433 18.4494 22.9326 20.0442C22.4751 20.5055 22.2655 20.6592 22.0176 20.6592C21.8841 20.6592 21.7123 20.5055 21.7123 20.0829V16.1427C21.7123 15.6432 21.5601 15.4126 21.1405 15.4126H18.052C17.7467 15.4126 17.5562 15.6432 17.5562 15.8738C17.5562 16.3542 18.2616 16.4697 18.3377 17.8149V20.7376C18.3377 21.3717 18.2252 21.4876 17.9755 21.4876C17.3083 21.4876 15.688 19.0085 14.716 16.1836C14.527 15.6241 14.335 15.4126 13.8392 15.4126H11.8566C11.2847 15.4126 11.1895 15.6815 11.1895 15.9698C11.1895 16.4888 11.8566 19.1022 14.2967 22.5612C15.9171 24.9237 18.2237 26.1935 20.3016 26.1935C21.5601 26.1935 21.7123 25.9051 21.7123 25.4247V23.6375C21.7123 23.0611 21.8267 22.9651 22.2272 22.9651C22.513 22.9651 23.0278 23.1185 24.1907 24.2525C25.525 25.5976 25.7537 26.2126 26.4973 26.2126H28.4609C29.0327 26.2126 29.2997 25.9242 29.1471 25.367C28.9757 24.8097 28.3274 24.0027 27.4885 23.042C27.031 22.5042 26.3447 21.9084 26.1351 21.62C25.8493 21.2356 25.9255 21.0819 26.1351 20.7361C26.116 20.7361 28.5182 17.3154 28.7657 16.1611" fill="#fff"></path>
+                </svg></a></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--include pug/_basic/_popup-->
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
