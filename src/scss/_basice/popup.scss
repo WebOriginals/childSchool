@@ -33,6 +33,7 @@ body.popup-show::after {
 }
 
 .popup__close {
+  outline: none;
   position: absolute;
   top: 15px;
   right: 15px;

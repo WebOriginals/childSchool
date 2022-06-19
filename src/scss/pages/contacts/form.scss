@@ -12,6 +12,11 @@
       align-items: center;
     }
   }
+  &__img{
+    img{
+      max-width: 100%;
+    }
+  }
   &__form{
     @include adaptiveValue(padding,30 , 20);
     border-radius: rem(15);

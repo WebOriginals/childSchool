@@ -6,11 +6,16 @@
   background-position: left center;
   @include maq('desktop') {
     background-position: right center;
+
   }
 }
 
 .first-body {
-  height: 120vh;
+  @include maq('desktop') {
+    padding-bottom: 50px;
+    padding-top: 64px;
+  }
+  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -63,7 +68,7 @@
 .first__bg {
   @include maq('desktop') {
     position: relative;
-    margin-top: -150px;
+    margin-top: -80px;
     img {
       max-width: 100%;
       height: auto;

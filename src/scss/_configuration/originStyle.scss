@@ -44,6 +44,7 @@ q{
 
 //Стилизация кнопок
 .button{
+  outline: none;
   background: $color_4;
   color: $color_1;
   text-align: center;
@@ -70,6 +71,7 @@ q{
 }
 
 .button-r{
+  outline: none;
   background: $color_6;
   color: $color_1;
   padding: 0 25px;
@@ -97,6 +99,7 @@ q{
 }
 
 .button-w{
+  outline: none;
   background: $color_1;
   color: $mainColor;
   padding: 0 25px;

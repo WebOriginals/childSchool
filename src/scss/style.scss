@@ -65,7 +65,9 @@ body {
   }
 }
 main{
-  background: url("../img/svg/b.svg") top 15% left -400px no-repeat , url("../img/svg/b.svg") top 47% right -400px no-repeat;
+  @include mq('tablet-wide') {
+    background: url("../img/svg/b.svg") top 15% left -400px no-repeat , url("../img/svg/b.svg") top 47% right -400px no-repeat;
+  }
 }
 p{
   margin-bottom: 0!important;
@@ -199,6 +201,7 @@ p{
 @import "pages/main/gallery";
 @import "pages/main/questions";
 @import "pages/main/learn";
+@import "pages/main/learn2";
 //@import "pages/main/form";
 @import "pages/main/form1";
 @import "pages/main/form2";

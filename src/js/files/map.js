@@ -1,8 +1,8 @@
 if(document.querySelector("#map")){
 	const map = L.map('map')
 		.setView({
-			lat: 59.96831,
-			lng: 30.31748,
+			lat: 45.063196,
+			lng: 38.963716,
 		}, 16);
 
 	L.tileLayer(
@@ -17,8 +17,8 @@ if(document.querySelector("#map")){
 
 	const mainPinMarker = L.marker(
 		{
-			lat: 59.96831,
-			lng: 30.31748,
+			lat: 45.063196,
+			lng: 38.963716,
 		},
 		{
 			icon: mainPinIcon,

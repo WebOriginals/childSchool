@@ -109,7 +109,8 @@ body._pc{
 }
 
 .stickytop {
-  background: $color_3;
+  background: $color_3 !important;
+  z-index: 10000;
   .body-header{
     height: 70px;
     .header__logo{
