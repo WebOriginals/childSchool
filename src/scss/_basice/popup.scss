@@ -22,7 +22,7 @@ body.popup-show::after {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10000;
   padding: 30px 10px;
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
@@ -38,6 +38,8 @@ body.popup-show::after {
   position: absolute;
   top: 15px;
   right: 15px;
+  z-index: 10;
+  background: none;
 }
 
 .popup_show .popup__content {
@@ -77,11 +79,11 @@ body.popup-show::after {
   font-weight: bold;
   @include adaptiveValue(margin-bottom, 10, 10);
 }
+
 .popup__text{
   @include adaptiveValue(font-size, 16, 14);
   @include adaptiveValue(margin-bottom, 30, 30);
 }
-
 
 .user-data{
   display: grid;
@@ -126,4 +128,55 @@ body.popup-show::after {
 .massagename__content{
   text-align: center;
   min-width: 320px;
+}
+
+
+
+.popup_massagename-message{
+
+  .popup__content{
+    padding: 0;
+    overflow: hidden;
+    border-radius: rem(15);
+    background: $color_1;
+  }
+
+  .popup__close {
+    @include maq('tablet-wide') {
+      path{
+        fill: #000 !important;
+      }
+    }
+  }
+
+  .popup-body{
+    display: grid;
+    @include mq('tablet-wide') {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  .popup-body__content{
+    padding: rem(20);
+    @include mq('tablet-wide') {
+      padding: rem(40);
+    }
+  }
+
+  .popup__title{
+    color: $color_3;
+  }
+  .popup__description{
+    @include adaptiveValue(font-size, 18, 16);
+  }
+  .popup__name{
+    @include adaptiveValue(font-size, 24, 18);
+    margin-top: rem(30);
+  }
+  .popup__post{
+    color: $color_7;
+  }
+  .popup-body__img-ibg{
+    min-height: rem(250);
+  }
 }

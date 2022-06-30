@@ -2192,7 +2192,7 @@ body.popup-show::after {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10000;
   padding: 30px 10px;
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
@@ -2208,6 +2208,8 @@ body.popup-show::after {
   position: absolute;
   top: 15px;
   right: 15px;
+  z-index: 10;
+  background: none;
 }
 
 .popup_show .popup__content {
@@ -2361,6 +2363,76 @@ body.popup-show::after {
 .massagename__content {
   text-align: center;
   min-width: 320px;
+}
+
+.popup_massagename-message .popup__content {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 0.9375rem;
+  background: #FFFFFF;
+}
+@media only screen and (max-width: 1023px) {
+  .popup_massagename-message .popup__close path {
+    fill: #000 !important;
+  }
+}
+.popup_massagename-message .popup-body {
+  display: grid;
+}
+@media only screen and (min-width: 1024px) {
+  .popup_massagename-message .popup-body {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+.popup_massagename-message .popup-body__content {
+  padding: 1.25rem;
+}
+@media only screen and (min-width: 1024px) {
+  .popup_massagename-message .popup-body__content {
+    padding: 2.5rem;
+  }
+}
+.popup_massagename-message .popup__title {
+  color: #458AFB;
+}
+@media (min-width: 75em) {
+  .popup_massagename-message .popup__description {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  .popup_massagename-message .popup__description {
+    font-size: calc(1rem + 0.125 * (((100vw - 20rem)) / ((55))));
+  }
+}
+@media (max-width: 20em) {
+  .popup_massagename-message .popup__description {
+    font-size: 1rem;
+  }
+}
+.popup_massagename-message .popup__name {
+  margin-top: 1.875rem;
+}
+@media (min-width: 75em) {
+  .popup_massagename-message .popup__name {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 75em) {
+  .popup_massagename-message .popup__name {
+    font-size: calc(1.125rem + 0.375 * (((100vw - 20rem)) / ((55))));
+  }
+}
+@media (max-width: 20em) {
+  .popup_massagename-message .popup__name {
+    font-size: 1.125rem;
+  }
+}
+.popup_massagename-message .popup__post {
+  color: #ACACAC;
+}
+.popup_massagename-message .popup-body__img-ibg {
+  min-height: 15.625rem;
 }
 
 .quantity {
