@@ -1,4 +1,4 @@
-.first {
+.first2 {
   background-color: $color_3;
   position: relative;
   background-repeat: no-repeat;
@@ -6,16 +6,27 @@
   background-position: left center;
   @include maq('desktop') {
     background-position: right center;
-
+  }
+  @include mq('desktop') {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 52%;
+      height: 100%;
+      background-color: $color_3;
+      z-index: 3;
+    }
   }
 }
 
-.first-body {
+.first2-body {
   @include maq('desktop') {
     padding-bottom: 50px;
     padding-top: 80px;
   }
   //height: 80vh;
+  z-index: 3;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -23,15 +34,15 @@
   //@include maq('desktop') {
   //  height: 80vh;
   //}
-   @include mq('desktop') {
-     height: 100vh;
+  @include mq('desktop') {
+    height: 120vh;
   }
   @include mq('desktop-wide') {
     height: 100vh;
   }
 }
 
-.first-body__content {
+.first2-body__content {
   color: $color_1;
   z-index: 1;
   @include mq('desktop') {
@@ -39,6 +50,12 @@
   }
   @include mq('2.5K') {
     width: 70%;
+  }
+  @include maq('tablet') {
+    .button{
+      width: 90%;
+      margin: auto;
+    }
   }
 
   h1 {
@@ -65,9 +82,9 @@
   }
 }
 
-.first__bg {
+.first2__bg {
   @include maq('desktop') {
-    display: none;
+
     position: relative;
     margin-top: -80px;
     img {
@@ -85,32 +102,4 @@
   }
 }
 
-.first__soc {
-  background: #F2F5F8;
-  border-radius: 15px;
-  display: grid;
-  grid-gap: rem(10);
-  align-items: center;
-  grid-template-columns: 100px 1fr;
-  color: $mainColor;
-  max-width: rem(360);
-  padding-right: rem(15);
-  margin-top: rem(50);
 
-  @include mq('tablet-wide') {
-    margin-top: rem(80);
-  }
-
-
-  .con{
-    display: flex;
-    gap: rem(10);
-    p{
-      font-size: 16px;
-    }
-    a{
-      display: inline-block;
-      margin-top: rem(10);
-    }
-  }
-}

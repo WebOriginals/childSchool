@@ -1,5 +1,5 @@
 // (c) Фрилансер по жизни, Хмурый Кот
-// Документация: 
+// Документация:
 // Подключение функционала "Чертогов Фрилансера"
 import { isMobile, bodyLockStatus, bodyLockToggle } from "../files/functions.js";
 
@@ -182,7 +182,7 @@ export class Popup {
 					this.targetOpen.element.querySelector(`.${this.options.classes.popupVideo}`).appendChild(iframe);
 			}
 			if (this.options.hashSettings.location) {
-				// Получение хэша и его выставление 
+				// Получение хэша и его выставление
 				this._getHash();
 				this._setHash();
 			}
@@ -224,6 +224,7 @@ export class Popup {
 		} else this.popupLogging(`Ой ой, такого попапа нет. Проверьте корректность ввода. `);
 	}
 	close(selectorValue) {
+		console.log(selectorValue)
 		if (selectorValue && typeof (selectorValue) === "string" && selectorValue.trim() !== "") {
 			this.previousOpen.selector = selectorValue;
 		}
@@ -257,10 +258,9 @@ export class Popup {
 		setTimeout(() => {
 			this._focusTrap();
 		}, 50);
-
 		this.popupLogging(`Закрыл попап`);
 	}
-	// Получение хэша 
+	// Получение хэша
 	_getHash() {
 		if (this.options.hashSettings.location) {
 			this.hash = this.targetOpen.selector.includes('#') ?
@@ -311,3 +311,6 @@ export class Popup {
 		this.options.logging ? console.log(`[Попапос]: ${message}`) : null;
 	}
 }
+
+
+

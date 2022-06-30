@@ -3,10 +3,13 @@ doctype html
 html(lang="ru")
     +head('Главная')
     body
-        .wrapper
+        .wrapper.main
             include pug/_basic/_header
-            .page.main
+            .page
+                include pug/main/first2
+                include pug/main/groups2
                 include pug/main/acquaintances
+                include pug/main/business2
                 include pug/main/business
                 include pug/main/earnings
                 include pug/main/first
@@ -28,6 +31,7 @@ html(lang="ru")
 
 
             include pug/_basic/_footer
+            include pug/_basic/_footer-fr
 
         //include pug/_basic/_popup
         include pug/_basic/_js

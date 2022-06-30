@@ -1,4 +1,12 @@
 //<Разметка текста>====================================================================================================
+.form__btn{
+  text-decoration: none !important;
+}
+@media only screen and (min-width: 1200px){
+  .first-body__content {
+    padding-top: 60px;
+  }
+}
 .offer {
 
 }
@@ -21,7 +29,9 @@
 }
 
 .h3,h3{
-
+  @include adaptiveValue(font-size, 24, 20);
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .h4,h4{

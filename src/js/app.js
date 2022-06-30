@@ -113,7 +113,7 @@ flsFunctions.initPopups(false);
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
- //import "./files/sliders.js";
+import "./files/sliders.js";
 
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================
 
@@ -143,7 +143,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // flsScroll.scrollWatcher(false);
 
 // 25Плавная навигация по странице
-// flsScroll.pageNavigation();
+ flsScroll.pageNavigation(true);
 
 // 26Функционал добавления классов к хедеру при прокрутке
 // flsScroll.headerScroll();

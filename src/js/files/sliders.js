@@ -1,5 +1,5 @@
 /*
-Документация по работе в шаблоне: 
+Документация по работе в шаблоне:
 Документация слайдера: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
@@ -8,9 +8,10 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper, { Navigation } from 'swiper';
+
 /*
 Основниые модули слайдера:
-Navigation, Pagination, Autoplay, 
+Navigation, Pagination, Autoplay,
 EffectFade, Lazy, Manipulation
 Подробнее смотри https://swiperjs.com/
 */
@@ -76,25 +77,46 @@ function initSliders() {
 	bildSliders();
 
 	// Перечень слайдеров
-	if (document.querySelector('.slider__swiper')) {
-		new Swiper('.slider__swiper', {
-			// Подключаем модули слайдера
-			// для конкретного случая
-			//modules: [Navigation, Pagination],
-			/*
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 10,
-			autoHeight: true,
-			speed: 800,
+	// if (document.querySelector('.slider__swiper')) {
+	// 	new Swiper('.slider__swiper', {
+	// 		// Подключаем модули слайдера
+	// 		// для конкретного случая
+	// 		//modules: [Navigation, Pagination],
+	// 		/*
+	// 		effect: 'fade',
+	// 		autoplay: {
+	// 			delay: 3000,
+	// 			disableOnInteraction: false,
+	// 		},
+	// 		*/
+	// 		observer: true,
+	// 		observeParents: true,
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 10,
+	// 		autoHeight: true,
+	// 		speed: 800,
+	//
+	// 	});
+	// }
+	if (document.querySelector('.earnings__slider') ) {
+		let earnings = new Swiper('.earnings__slider', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			loop: true,
+			centeredSlides: true,
 
+			breakpoints: {
+				// when window width is >= 320px
+				320: {
+					slidesPerView: 1.5,
+					spaceBetween: 20
+				},
+
+				767: {
+					slidesPerView: 3,
+					spaceBetween: 30
+				},
+			}
 		});
 	}
 }

@@ -14,15 +14,10 @@
   &__title{
     margin-bottom: 10px;
     color: $color_1;
-    @include mq('tablet-wide') {
-      max-width: 60%;
-    }
   }
   p{
     margin-bottom: rem(30);
-    @include mq('tablet-wide') {
-      max-width: 60%;
-    }
+
   }
   &__text{
     @include adaptiveValue(margin-bottom,60,20);
@@ -93,7 +88,9 @@
   color: $color_1;
   border-radius: 15px;
   overflow: hidden;
-
+  @include mq('tablet-wide') {
+    max-width: 50%;
+  }
 
   &__content{
     position: relative;
@@ -101,6 +98,7 @@
     @include maq('tablet-wide') {
       padding: 20px 15px;
     }
+
 
     .mt-30{
       margin-top: rem(30);
@@ -122,13 +120,13 @@
 .qviz{
   @include mq('tablet-wide') {
     .form-body{
-      height: 30vh !important;
+      min-height: 30vh !important;
     }
-    .form__title{
-      max-width: 60%;
-    }
-    p{
-      max-width: 60%;
-    }
+    //.form__title{
+    //  max-width: 60%;
+    //}
+    //p{
+    //  max-width: 60%;
+    //}
   }
 }

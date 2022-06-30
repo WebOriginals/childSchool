@@ -3,5 +3,13 @@
   &__list{
     display: flex;
     gap: rem(5);
+    flex-wrap: wrap;
+    a{
+      color: $mainColor;
+    }
+
+    li{
+      color: $color_7;
+    }
   }
 }

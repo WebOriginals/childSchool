@@ -7,6 +7,12 @@
     @include adaptiveValue(margin-bottom, 60, 30);
   }
 
+  &__description{
+    @include mq('tablet-wide') {
+      max-width: 65%;
+      margin: auto;
+    }
+  }
   &__grid{
     display: grid;
     grid-gap: rem(30);

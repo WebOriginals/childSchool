@@ -193,8 +193,10 @@ p{
 
 //main
 @import "pages/main/first";
+@import "pages/main/first2";
 @import "pages/main/acquaintances";
 @import "pages/main/groups";
+@import "pages/main/groups2";
 
 
 @import "pages/main/training";
@@ -202,13 +204,14 @@ p{
 @import "pages/main/questions";
 @import "pages/main/learn";
 @import "pages/main/learn2";
-//@import "pages/main/form";
+@import "pages/main/form";
 @import "pages/main/form1";
 @import "pages/main/form2";
 @import "pages/main/form4";
 @import "pages/main/earnings";
 @import "pages/main/online-meeting";
 @import "pages/main/business";
+@import "pages/main/business2";
 @import "pages/main/receive";
 @import "pages/main/rates";
 @import "pages/main/formUp";
@@ -228,6 +231,7 @@ p{
 @import "pages/blog/blog";
 @import "pages/blog/internal";
 @import "pages/blog/pagination";
+//@import "pages/blog/test";
 
 //contacts
 @import "pages/contacts/map";

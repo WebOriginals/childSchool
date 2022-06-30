@@ -1,4 +1,4 @@
-.form{
+.form5{
   position: relative;
   background-color: $color_3;
   padding: 50px 0;
@@ -60,13 +60,13 @@
       @include mq('tablet-wide') {
         width: auto;
         height: 100%;
-       
+
       }
     }
   }
 }
 
-.form-body{
+.form5-body{
   background-color: $color_3;
   color: $color_1;
   border-radius: 15px;
@@ -79,7 +79,7 @@
     }
   }
   @include mq('tablet-wide') {
-    height: 48vh;
+    min-height: 48vh;
     display: flex;
     align-items: center;
   }
